@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using eShopLegacyMVC.Models;
 using System;
-using eShopLegacyMVC.ViewModel;
+using eShopLegacyMVC.Pages.Catalog;
 
 namespace eShopLegacyMVC.Services
 {

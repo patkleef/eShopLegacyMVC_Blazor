@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<AssemblyName>eShopLegacyMVC</AssemblyName>
+		<LangVersion>9.0</LangVersion>
 	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />

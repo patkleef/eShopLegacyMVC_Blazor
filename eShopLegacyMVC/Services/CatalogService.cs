@@ -1,7 +1,7 @@
 ﻿using eShopLegacyMVC.Models;
 using System.Collections.Generic;
 using System.Linq;
-using eShopLegacyMVC.ViewModel;
+using eShopLegacyMVC.Pages.Catalog;
 using Microsoft.EntityFrameworkCore;
 
 namespace eShopLegacyMVC.Services

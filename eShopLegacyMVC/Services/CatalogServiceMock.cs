@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using eShopLegacyMVC.Models;
 using eShopLegacyMVC.Models.Infrastructure;
-using eShopLegacyMVC.ViewModel;
+using eShopLegacyMVC.Pages.Catalog;
 
 namespace eShopLegacyMVC.Services
 {
@@ -32,7 +32,11 @@ namespace eShopLegacyMVC.Services
 
         public CatalogItem FindCatalogItem(int id)
         {
-            return catalogItems.FirstOrDefault(x => x.Id == id);
+            var item = catalogItems.FirstOrDefault(x => x.Id == id);
+            item.CatalogBrand = GetCatalogBrands().FirstOrDefault(x => x.Id == item.CatalogBrandId);
+            item.CatalogType = GetCatalogTypes().FirstOrDefault(x => x.Id == item.CatalogTypeId);
+
+            return item;
         }
 
         public IEnumerable<CatalogType> GetCatalogTypes()

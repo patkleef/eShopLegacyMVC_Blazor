@@ -1,0 +1,96 @@
+﻿@page "/Catalog/Details/{id:int}"
+
+<h2 class="esh-body-title">Details</h2>
+
+<div class="container">
+    <div class="row">
+        <img class="col-md-6 esh-picture" src="@($"/Pics/{Item.PictureFileName}")" />
+        <dl class="col-md-6 dl-horizontal">
+            <dt>
+                Name
+            </dt>
+
+            <dd>
+                @Item.Name
+            </dd>
+
+            <dt>
+                Description
+            </dt>
+
+            <dd>
+                @Item.Description
+            </dd>
+
+            <dt>
+                Brand
+            </dt>
+
+            <dd>
+                @Item.CatalogBrand.Brand
+            </dd>
+
+            <dt>
+                Type
+            </dt>
+
+            <dd>
+                @Item.CatalogType.Type
+            </dd>
+
+            <dt>
+                Price
+            </dt>
+
+            <dd>
+                @Item.Price
+            </dd>
+
+            <dt>
+                PictureFileName
+            </dt>
+
+            <dd>
+                @Item.PictureFileName
+            </dd>
+
+            <dt>
+                AvailableStock
+            </dt>
+
+            <dd>
+                @Item.AvailableStock
+            </dd>
+
+            <dt>
+                RestockThreshold
+            </dt>
+
+            <dd>
+                @Item.RestockThreshold
+            </dd>
+
+            <dt>
+                MaxStockThreshold
+            </dt>
+
+            <dd>
+                @Item.MaxStockThreshold
+            </dd>
+
+        </dl>
+    </div>
+    <p class="esh-link-list esh-link-item--margin">
+        <a href="@($"/Catalog/Edit/{Item.Id}")" class="esh-link-item">
+            Edit
+        </a>
+
+        <button class="btn esh-button esh-button-primary" @onclick="DeleteClick">
+            [ Delete ]
+        </button>
+        |
+        <a href="/" class="esh-link-item">
+            Back to list
+        </a>
+    </p>
+</div>
